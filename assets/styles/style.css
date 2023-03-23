@@ -172,6 +172,13 @@ section.card_details{
   header{
     display: flex;
     justify-content: center;
+    height: 30vh;
+  }
+  main {
+    min-height: 60vh;
+  }
+  footer {
+    min-height: 10vh;
   }
   .color_nav_button1 {
     background-color:  rgb(243, 134, 185);

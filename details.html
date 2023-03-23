@@ -27,6 +27,7 @@
           </div>
         </header>
         <main id = "app">
+          <!--card-->
           <section class="p-3">
             <div class=" card_details m-5" id="cards_details">
               <div class="card_details_body">
@@ -41,9 +42,9 @@
                   <p class="card-text">Description: {{detailCard.description}}</p>
                   <p class="card-text">Category: {{detailCard.category}}</p>
                   <p class="card-text">Place: {{detailCard.place}}</p>
-                  <p class="card-text">Capacity: ${{detailCard.capacity}}</p>
-                  <p v-if="!detailCard.assistance" class="card-text">Assistance: {{detailCard.assistance}}</p>
-                  <p v-if="!detailCard.estimate" class="card-text">Estimate: {{detailCard.estimate}}</p>
+                  <p class="card-text">Capacity: {{detailCard.capacity}}</p>
+                  <p v-if="detailCard.assistance!=undefined" class="card-text">Assistance: {{detailCard.assistance}}</p>
+                  <p v-if="detailCard.estimate!=undefined" class="card-text">Estimate: {{detailCard.estimate}}</p>
                   <p class="card-text"><small class="text-muted">Price: $ {{detailCard.price}}</small></p>
                 </div>
               </div>

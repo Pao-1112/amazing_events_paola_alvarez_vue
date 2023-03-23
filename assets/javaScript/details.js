@@ -6,8 +6,7 @@ createApp({
     return {
       arrayEvents: [],
       detailCard: [],
-      params: "",
-      id:""
+      id:undefined
     }
   },
   created(){
@@ -17,9 +16,9 @@ createApp({
       this.arrayEvents = data.events
       console.log(this.arrayEvents)
 
-      this.params = new URLSearchParams(location.search);
-      this.id = this.params.get('id');
+      const id = new URLSearchParams(location.search).get("id");
       this.detailCard = this.arrayEvents.find(event => event._id == id)
+      console.log(this.id)
       console.log(this.detailCard)
     })
     .catch(error => console.log(error))

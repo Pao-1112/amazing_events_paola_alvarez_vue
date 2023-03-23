@@ -100,7 +100,7 @@
                   <p class="card-text text-center">{{events.description}}</p>
                   <div class="d-flex justify-content-between">
                     <p>Price: $ {{events.price}}</p>
-                    <a href="./details.html" class="text-decoration-none text-white text-center card_buttom p-2">Enter</a>
+                    <a :href="'./details.html?id='+events._id" class="text-decoration-none text-white text-center card_buttom p-2">Enter</a>
                   </div>
                 </div>
               </div>
